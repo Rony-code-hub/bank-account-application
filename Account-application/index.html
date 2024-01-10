@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Account</title>
+  </head>
+  <body>
+    <!-- Top page -->
+    <div class="front-page">
+      <div class="image">
+        <img src="logo.png" alt="Logo" class="logo" />
+        <p class="login__text">Log in</p>
+      </div>
+
+      <form class="login">
+        <input
+          type="text"
+          placeholder="USER"
+          class="login__input login__input--user"
+        />
+        <input
+          type="text"
+          placeholder="PIN"
+          maxlength="4"
+          class="login__input login__input--pin"
+        />
+        <button class="login__btn">Login</button>
+      </form>
+    </div>
+
+    <main class="app visible">
+      <!-- nab bar -->
+      <nav class="navbar">
+        <img src="logo.png" alt="Logo" class="logo" />
+        <div>
+          <p class="account__watch">Watch</p>
+        </div>
+        <div class="navbar__box">
+          <p class="navbar__text">Welcome, Rony P.</p>
+          <button class="navbar__logout">Log Out</button>
+        </div>
+      </nav>
+
+      <section class="operations">
+        <div class="operation operation__transfer">
+          <h2 class="operation__transfer--text">Transfer money</h2>
+          <form class="form form--transfer">
+            <div>
+              <span class="form__label">Transfer to: </span>
+              <input type="text" class="form__input form__input--to" />
+            </div>
+            <div>
+              <span class="form__label">Amount: </span>
+              <input
+                type="number"
+                class="form__input form__input--amount form__input--amount-transfer"
+              />
+            </div>
+
+            <button class="form__btn form__btn--transfer">Send</button>
+          </form>
+        </div>
+
+        <div class="operation operation__loan">
+          <h2 class="operation__load--text">Request loan</h2>
+          <form class="form form--loan">
+            <div>
+              <label class="form__label">Amount: </label>
+              <input
+                type="number"
+                class="form__input form__input--amount form__input--amount-loan"
+              />
+            </div>
+            <button class="form__btn form__btn--loan">Loan</button>
+          </form>
+        </div>
+
+        <div class="operation operation__close">
+          <h2 class="operation__close--text">Close account</h2>
+          <form class="form form--close">
+            <div>
+              <label class="form__label">Confirm User: </label>
+              <input type="text" class="form__input form__input--user" />
+            </div>
+
+            <div>
+              <label class="form__label">Confirm PIN: </label>
+              <input
+                type="password"
+                maxlength="4"
+                class="form__input form__input--pin"
+              />
+            </div>
+            <button class="form__btn form__btn--close">Close</button>
+          </form>
+        </div>
+
+        <div class="form form__timer">
+          <p class="timer__text">10:00</p>
+          <p class="timer__text">You will logged out</p>
+        </div>
+      </section>
+
+      <section class="movement">
+        <div class="movements">
+          <div class="movements__row">
+            <div class="movements__type movements__type--deposit">
+              5 deposit
+            </div>
+            <div class="movements__date">3 days ago</div>
+            <div class="movements__value">10000$</div>
+          </div>
+
+          <div class="movements__row">
+            <div class="movements__type movements__type--withdrawal">
+              1 withdrawal
+            </div>
+            <div class="movements__date">29/11/2023</div>
+            <div class="movements__value">- 5000$</div>
+          </div>
+        </div>
+
+        <div class="summary">
+          <div class="summary__label">
+            <div class="summary__label--balance">
+              <div class="summary__label--balance-value summary--text-amount">
+                15000$
+              </div>
+              <div class="summary__label--balance-text summary--text">
+                Balance
+              </div>
+            </div>
+
+            <div class="summary__label--in">
+              <div class="summary__label--in-value summary--text-amount">
+                5000$
+              </div>
+              <div class="summary__label--in-text summary--text">In</div>
+            </div>
+
+            <div class="summary__label--out">
+              <div class="summary__label--out-value summary--text-amount">
+                2000$
+              </div>
+              <div class="summary__label--out-text summary--text">Out</div>
+            </div>
+
+            <div class="summary__label--interest">
+              <div class="summary__label--interest-value summary--text-amount">
+                2000$
+              </div>
+              <div class="summary__label--interest-text summary--text">
+                Interest
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="sort">
+          <button class="sort__btn">Sort &darr;</button>
+        </div>
+        <div class="copyright">Copyright&copy; by Mahfuj Ahmed Rony</div>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
